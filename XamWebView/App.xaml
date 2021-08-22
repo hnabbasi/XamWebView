@@ -1,0 +1,8 @@
+﻿<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamWebView.App">
+    <Application.Resources>
+        <x:String x:Key="NormalPost">https://spacecityweather.com/several-dry-days-ahead-for-houston-with-late-summer-heat/</x:String>
+        <x:String x:Key="EmbeddedPost">https://spacecityweather.com/a-tricky-forecast-for-rain-chances-this-weekend-in-houston/</x:String>
+    </Application.Resources>
+</Application>
