@@ -2,6 +2,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamWebView.App">
     <Application.Resources>
+        <Style TargetType="Frame">
+            <Setter Property="BackgroundColor"
+                    Value="#4A2FCF"/>
+            <Setter Property="HasShadow"
+                    Value="False"/>
+            <Setter Property="CornerRadius"
+                    Value="0"/>
+        </Style>
+        <Style x:Key="LightText" TargetType="Label">
+            <Setter Property="TextColor"
+                    Value="White"/>
+        </Style>
+        <Style x:Key="Title" TargetType="Label"
+               BasedOn="{StaticResource LightText}">
+            <Setter Property="FontSize"
+                    Value="Title"/>
+            <Setter Property="FontAttributes"
+                    Value="Bold"/>
+        </Style>
+        <Style x:Key="Footer" TargetType="Label"
+               BasedOn="{StaticResource LightText}">
+            <Setter Property="FontSize"
+                    Value="Small"/>
+        </Style>
+        <x:String x:Key="MeetupPage">https://meetup.com/houstonxug/</x:String>
         <x:String x:Key="NormalPost">https://spacecityweather.com/several-dry-days-ahead-for-houston-with-late-summer-heat/</x:String>
         <x:String x:Key="EmbeddedPost">https://spacecityweather.com/a-tricky-forecast-for-rain-chances-this-weekend-in-houston/</x:String>
     </Application.Resources>

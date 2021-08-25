@@ -1,25 +1,22 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamWebView.MainPage">
+             x:Class="XamWebView.MainPage"
+             xmlns:local="clr-namespace:XamWebView">
     <ScrollView Padding="0">
         <StackLayout Padding="0"
                      Spacing="0">
-            <Frame HasShadow="False"
-                   BackgroundColor="#4A2FCF"
-                   CornerRadius="0"
-                   Padding="16,70,16,16">
+            <Frame Padding="16,70,16,16">
                 <Label Text="Welcome"
-                       TextColor="White"/>
+                       Style="{StaticResource Title}"/>
             </Frame>
 
-            <WebView HeightRequest="500"
-                     Source="{StaticResource NormalPost}"/>
+            <local:MyWebView HeightRequest="500"
+                     Source="{StaticResource MeetupPage}"/>
 
-            <Frame HasShadow="False"
-                   BackgroundColor="#4A2FCF"
-                   CornerRadius="0">
+            <Frame>
                 <Label Text="Copyright 2021"
-                       TextColor="White"/>
+                       Style="{StaticResource Footer}"
+                       HorizontalOptions="Center"/>
             </Frame>
         </StackLayout>
     </ScrollView>
