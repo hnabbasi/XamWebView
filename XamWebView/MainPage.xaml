@@ -10,8 +10,8 @@
                        Style="{StaticResource Title}"/>
             </Frame>
 
-            <local:MyWebView HeightRequest="500"
-                     Source="{StaticResource MeetupPage}"/>
+            <local:AutoResizeWebView Source="{StaticResource MeetupPage}"
+                                     HeightRequest="500" />
 
             <Frame>
                 <Label Text="Copyright 2021"

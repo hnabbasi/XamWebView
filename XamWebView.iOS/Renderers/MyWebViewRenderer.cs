@@ -7,7 +7,7 @@ using Xamarin.Forms.Platform.iOS;
 using XamWebView;
 using XamWebView.iOS.Renderers;
 
-[assembly: ExportRenderer(typeof(MyWebView), typeof(MyWebViewRenderer))]
+[assembly: ExportRenderer(typeof(AutoResizeWebView), typeof(MyWebViewRenderer))]
 namespace XamWebView.iOS.Renderers
 {
     public class MyWebViewRenderer : WkWebViewRenderer
@@ -29,16 +29,6 @@ namespace XamWebView.iOS.Renderers
                 TempNavDelegate = new MyWKWebViewNavigationDelegate(this);
 
                 NavigationDelegate = TempNavDelegate;
-
-                // For fixing white flash issue in webview on dark themes/backgrounds and disable webview's scrolling
-                if (NativeView == null) 
-                    return;
-                
-                var webView = (WKWebView)NativeView;
-
-                webView.Opaque = false;
-                webView.BackgroundColor = UIColor.Clear;
-                webView.ScrollView.ScrollEnabled = false;
             }
             catch (Exception ex)
             {
@@ -60,7 +50,7 @@ namespace XamWebView.iOS.Renderers
                 try
                 {
                     // wait here till content is rendered
-                    await Task.Delay(100);
+                    await Task.Delay(1000);
 
                     if (_webViewRenderer.Element is WebView formsWebView && webView != null)
                     {

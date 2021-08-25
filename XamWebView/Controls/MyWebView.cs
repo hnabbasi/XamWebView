@@ -1,4 +1,4 @@
 ﻿namespace XamWebView
 {
-    public class MyWebView : Xamarin.Forms.WebView { }
+    public class AutoResizeWebView : Xamarin.Forms.WebView { }
 }
